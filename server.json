@@ -1,25 +1,25 @@
 {
-    "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-    "name": "ai.autorfp/mcp",
-    "title": "AutoRFP.ai",
-    "description": "MCP server for AutoRFP.ai. Search projects, requirements, content library, and tags to answer questions or analyse data.",
-    "websiteUrl": "https://autorfp.ai",
-    "repository": {
-      "url": "https://github.com/AutoRFP/mcp",
-      "source": "github"
-    },
-    "version": "1.0.0",
-    "remotes": [
-      {
-        "type": "streamable-http",
-        "url": "https://{api_host}/mcp",
-        "variables": {
-          "api_host": {
-            "description": "AutoRFP.ai API host for your data-residency region.",
-            "isRequired": true,
-            "choices": ["api.autorfp.ai", "api.eu.autorfp.ai", "api.us.autorfp.ai"]
-          }
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "ai.autorfp/mcp",
+  "title": "AutoRFP.ai",
+  "description": "Search AutoRFP.ai projects, requirements, content library, and tags for Q&A and analytics.",
+  "websiteUrl": "https://autorfp.ai",
+  "repository": {
+    "url": "https://github.com/AutoRFP/mcp",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://{api_host}/mcp",
+      "variables": {
+        "api_host": {
+          "description": "AutoRFP.ai API host for your data-residency region.",
+          "isRequired": true,
+          "choices": ["api.autorfp.ai", "api.eu.autorfp.ai", "api.us.autorfp.ai"]
         }
       }
-    ]
-  }
+    }
+  ]
+}
